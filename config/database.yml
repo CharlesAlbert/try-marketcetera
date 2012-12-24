@@ -5,19 +5,18 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  database: churumelas
-  username: churumelas
-  password: churu
+  database: mktc
+  username: jonatasdp
+  password:
 
 test:
   adapter: postgresql
   database: churumelas_test
-  username: churumelas
-  password: churu
+  username: jonatasdp
+  password:
 
 production:
   adapter: postgresql
-  database: xurumelas_production
-  username: root
-  password: 1qazxsw2#$
-  socket: /var/run/mysqld/mysqld.sock
+  username: jonatasdp
+  password:
+  database: mktc_production

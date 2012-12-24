@@ -1,4 +1,5 @@
-require "sandbox"
+require "mktc-sandbox"
+
 class GameChallenge < ActiveRecord::Base
   COMMENT = '# your code here'
   belongs_to :game
@@ -58,9 +59,7 @@ class GameChallenge < ActiveRecord::Base
     logger.info "Evaluating... with #{answer}"
     logger.info self.compiled_challenge
     begin
-      @sandbox = Sandbox.new
-      @sandbox.load "# encoding: utf-8"
-      @sandbox.eval self.compiled_challenge
+      MktcSandbox.eval self.compiled_challenge
       self.thread_return = true
       return true
     rescue  Exception => e

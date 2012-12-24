@@ -1,3 +1,4 @@
+require "app/challenges/all"
 class GameController < ApplicationController
   before_filter :load_game_challenge, :only => [:start, :level, :answer, :start_typing]
   def start

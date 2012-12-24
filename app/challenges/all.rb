@@ -1,4 +1,4 @@
-require "sandbox"
+require "mktc-sandbox"
 Challenges = [ ]
 def challenge opts
   challenge = Class.new
@@ -15,7 +15,7 @@ def challenge opts
     raise 'wtf!'
   end
   compiled_valid_code = challenge.code_challenge.gsub(GameChallenge::COMMENT, challenge.valid_answer)
-  Sandbox.new.eval compiled_valid_code
+  MktcSandbox.eval compiled_valid_code
   Challenges << challenge
 end
 Challenges.class_eval do
@@ -24,14 +24,17 @@ Challenges.class_eval do
     raise "There's no level #{level} on #{Challenges.collect(&:level).inspect}"
   end
 end
-GameChallenge::COMMENT = "# seu codigo aqui"
 challenges = %w(
-  iniciar
-  zerar_terceira_coluna_da_matriz
-  calcular_soma_da_terceira_coluna_da_matriz
-  trocar_segunda_linha_pela_quarta
-  multiplicar_pela_escalar_3
-) # TODO: erase these line when it grow up to 100 challenges
+ wellcome
+ on_start
+)
+=begin
+ start_logging_yourself
+ understanding_the_environment
+ connecting_things
+ connect_the_market_data
+)
+=end
 challenges.each do |challenge|
-  require "unisep/#{challenge}"
+  require challenge
 end
