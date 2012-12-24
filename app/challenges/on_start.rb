@@ -2,8 +2,8 @@ challenge :title => "Strategy.method(:on_start)",
   :description =>"Marketcetera has many modules to keep the code and rules clear. We'll get concentrated into the [Strategy][strategy_java_doc] module starting on the first method named on_start. These method will just log an info into our system and show you the code.",
   :code_challenge => %q{
 include_class "org.marketcetera.strategy.ruby.Strategy"
-class MyFirstExplorativeStrategy < Strategy
-  def start
+class MyFirstExploratoryStrategy < Strategy
+  def on_start
     info "I'm here starting into the wild..."
     # your code here
   end
