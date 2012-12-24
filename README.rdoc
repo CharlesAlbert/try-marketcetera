@@ -5,3 +5,7 @@ It comes from and idea I develop on Rails Rumble 2012 (github.com/churumelas), n
 My initial plans is create a kind of easy/medium/hard challenges hacking the platform step by step as I did while facing my development tasks working for my customers.
 
 If you wanna to contribute, let'me know! I wanna translate it to other languages too.
+
+
+To run it on your machine, download the latest version from photon and copy each jar from plugins and org.marketcetera.thirdparty... subfolder to Rails.root + /lib/jars/marketcetera directory.
+
